@@ -11,7 +11,9 @@ cars = [
     {'make': 'Ford', 'model': 'Focus'}
 ]
 
-with open('cars_json.txt', 'w') as file:
+print(f"type of cars= {type(cars)}")
+
+with open('cars_json.json', 'w') as file:
     json.dump(cars, file)
 
 
@@ -19,3 +21,8 @@ my_json_string = '[{"name": "Alfa Romeo", "released": 1950}]'
 
 incorrect_car = json.loads(my_json_string)
 print(incorrect_car[0]['name'])
+
+somestring=json.dumps(incorrect_car)
+print(type(somestring))
+
+
